@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import database.DaoUsuario;
+import model.Usuario;
 
 public class Login extends AppCompatActivity {
 
@@ -26,10 +27,10 @@ public class Login extends AppCompatActivity {
         edSenha = (EditText) findViewById(R.id.edSenha);
         btLogin = (Button)   findViewById(R.id.btLogin);
 
-        botaoLogin ();
+        botaoLogin();
     }
 
-    public class botaoLogin (){
+    public void botaoLogin(){
         btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
