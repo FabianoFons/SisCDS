@@ -2,7 +2,11 @@ package database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import model.Usuario;
 
@@ -34,6 +38,76 @@ public class DaoUsuario {
         }else {
             return false;
         }
+    }
+
+    public List<Usuario> getUsuarios(){
+        List<Usuario> lista = new ArrayList<Usuario>();
+        DataBaseHelper.initializeInstance(this.context);
+        SQLiteDatabase db =  DataBaseHelper.getInstance().openDatabase();
+        Cursor cursor = db.rawQuery("SELECT _id, nome, login, senha FROM usuario ",null);
+        cursor.moveToFirst();
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            Usuario usuario = new Usuario();
+            usuario.setId(cursor.getInt(0));
+            usuario.setNome(cursor.getString(1));
+            usuario.setLogin(cursor.getString(2));
+            usuario.setSenha(cursor.getString(3));
+            lista.add(usuario);
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+        DataBaseHelper.getInstance().closeDatabase();
+
+        return lista;
+    }
+
+    public Usuario getUsuarioByID(long id){
+        Usuario usuario = null;
+        DataBaseHelper.initializeInstance(this.context);
+        SQLiteDatabase db =  DataBaseHelper.getInstance().openDatabase();
+
+        Cursor cursor =
+                db.rawQuery("SELECT _id, nome, login, senha FROM usuario d where d._id = ?", new String[]{id + ""});
+        cursor.moveToFirst();
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            usuario = new Usuario();
+            usuario.setId(cursor.getInt(0));
+            usuario.setNome(cursor.getString(1));
+            usuario.setLogin(cursor.getString(2));
+            usuario.setSenha(cursor.getString(3));
+        }
+
+        cursor.close();
+        DataBaseHelper.getInstance().closeDatabase();
+
+        return usuario;
+    }
+
+    public Usuario getUsuarioByLoginSenha(String login, String senha){
+        Usuario usuario = null;
+        DataBaseHelper.initializeInstance(this.context);
+        SQLiteDatabase db =  DataBaseHelper.getInstance().openDatabase();
+
+        Cursor cursor =
+                db.rawQuery("SELECT _id, nome, login, senha FROM usuario d where d.login = ? and d.senha = ?",
+                        new String[]{login, senha});
+        cursor.moveToFirst();
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            usuario = new Usuario();
+            usuario.setId(cursor.getInt(0));
+            usuario.setNome(cursor.getString(1));
+            usuario.setLogin(cursor.getString(2));
+            usuario.setSenha(cursor.getString(3));
+        }
+
+        cursor.close();
+        DataBaseHelper.getInstance().closeDatabase();
+
+        return usuario;
     }
 
 

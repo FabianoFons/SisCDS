@@ -21,8 +21,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         Log.d("Create","Create");
-        db.execSQL("Create table usuario (_id INTEGER PRIMARY KEY." +
-                "nome VARCHAR(50), login VARCHAR(50), senha VARCHAR(50)");
+        db.execSQL("Create table usuario (_id INTEGER PRIMARY_KEY," +
+                "nome VARCHAR(50), login VARCHAR(50), senha VARCHAR(50));");
 
         db.execSQL("insert into usuario (nome, login, senha) values ('Admin','admin','123');");
     }
