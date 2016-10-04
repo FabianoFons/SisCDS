@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import database.DaoUsuario;
+import database.DaoUsuarioLogado;
 import model.Usuario;
 
 public class Login extends AppCompatActivity {
@@ -43,6 +44,8 @@ public class Login extends AppCompatActivity {
                     if (usuario == null){
                         Toast.makeText(getBaseContext(),"Usuário/Senha Inválido",Toast.LENGTH_LONG).show();
                     }else {
+                        DaoUsuarioLogado daoUsuarioLogado = new DaoUsuarioLogado(getBaseContext());
+                        daoUsuarioLogado.gravar(usuario);
                         Intent intent = new Intent(getBaseContext(),AnaliseEntomologica.class);
                         startActivity(intent);
                     }

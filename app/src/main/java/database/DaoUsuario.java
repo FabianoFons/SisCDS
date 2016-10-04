@@ -40,6 +40,8 @@ public class DaoUsuario {
         }
     }
 
+
+
     public List<Usuario> getUsuarios(){
         List<Usuario> lista = new ArrayList<Usuario>();
         DataBaseHelper.initializeInstance(this.context);
