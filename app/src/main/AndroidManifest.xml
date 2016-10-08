@@ -15,7 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AnaliseEntomologica"></activity>
+        <activity android:name=".AnaliseEntomologica" />
+        <activity
+            android:name=".InfoBroca"
+            android:label="@string/title_activity_info_broca"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Consulta"
+            android:label="@string/title_activity_consulta"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

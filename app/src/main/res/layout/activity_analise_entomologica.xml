@@ -34,7 +34,7 @@
 
             <TextView
                 android:layout_width="36dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="P.R."
                 android:id="@+id/textView14" />
 
@@ -52,7 +52,7 @@
 
             <TextView
                 android:layout_width="56dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="Talhão"
                 android:id="@+id/textView15" />
 
@@ -112,11 +112,18 @@
                 android:id="@+id/textView3" />
 
             <EditText
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/editText3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -125,76 +132,40 @@
                 android:id="@+id/textView4" />
 
             <EditText
-                android:layout_width="70dp"
+                android:layout_width="298dp"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/editText4" />
         </LinearLayout>
 
-        <ListView
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="244dp" />
+            android:layout_height="wrap_content"
+            android:layout_weight="0.46" />
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <Button
+            android:text="Cadatrar Informações da Broca"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/btBroca" />
 
-            <TextView
-                android:layout_width="69dp"
-                android:layout_height="wrap_content"
-                android:text="Total nós"
-                android:id="@+id/textView9" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText21"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
+        <Button
+            android:text="Consultar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/btConsultar" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Brocados"
-                android:id="@+id/textView10" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText22"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
+        <Button
+            android:text="Enviar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/btEnviar" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Podridão Vermelha"
-                android:id="@+id/textView11" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText23"
-                android:layout_weight="1" />
-        </LinearLayout>
+        <Button
+            android:text="Cancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btCancelar" />
     </LinearLayout>
 </RelativeLayout>

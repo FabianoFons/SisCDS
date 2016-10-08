@@ -43,7 +43,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("Create table talhao (" +
                 " _id INTEGER PRIMARY_KEY," +
                 " identificacao VARCHAR(20), " +
-                " area VARCHAR(20));");
+                " area VARCHAR(20)," +
+                " idPropriedade int," +
+                " corte int);");
 
         db.execSQL("Create table corte (" +
                 " _id INTEGER PRIMARY_KEY," +
@@ -61,11 +63,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("insert into propriedaderural (_id, nome, identificacao) values (2, 'Sítio Santo Antonio','2');");
         db.execSQL("insert into propriedaderural (_id, nome, identificacao) values (3, 'Chácara Mané','3');");
 
-        db.execSQL("insert into talhao (_id, identificacao, area) values (1, 'IDTC:1','Area:12');");
-        db.execSQL("insert into talhao (_id, identificacao, area) values (2, 'IDTC:2','Area:19');");
-        db.execSQL("insert into talhao (_id, identificacao, area) values (3, 'IDTC:3','Area:5');");
-
-        db.execSQL("insert into corte (_id, tipo) values (1, '3');");
+        db.execSQL("insert into talhao (_id, identificacao, area, idPropriedade, corte) values (1, 'IDTC:1','Area:12', 1, 3);");
+        db.execSQL("insert into talhao (_id, identificacao, area, idPropriedade, corte) values (2, 'IDTC:2','Area:19', 2, 10);");
+        db.execSQL("insert into talhao (_id, identificacao, area, idPropriedade, corte) values (3, 'IDTC:3','Area:5' , 3, 12);");
     }
 
     @Override

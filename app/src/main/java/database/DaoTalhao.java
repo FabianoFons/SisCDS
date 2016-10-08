@@ -28,6 +28,8 @@ public class DaoTalhao {
         content.put("identificacao", talhao.getIdentificacao());
         content.put("area", talhao.getArea());
         content.put("data", String.valueOf(talhao.getData()));
+        content.put("idPropriedade", String.valueOf(talhao.getIdPropriedade()));
+        content.put("corte", String.valueOf(talhao.getCorte()));
 
         DataBaseHelper.initializeInstance(this.context);
         SQLiteDatabase db = DataBaseHelper.getInstance().openDatabase();
@@ -43,14 +45,15 @@ public class DaoTalhao {
         }
     }
 
-    public List<Talhao> getTalhao(){
+    public List<Talhao>     getTalhao(int idPropriedade){
         List<Talhao> lista = new ArrayList<Talhao>();
         DataBaseHelper.initializeInstance(this.context);
         SQLiteDatabase db =  DataBaseHelper.getInstance().openDatabase();
         Cursor cursor =
-                db.rawQuery(" SELECT _id, identificacao, area " +
-                        " FROM talhao" +
-                        " order by identificacao",null);
+                db.rawQuery(" SELECT _id, identificacao, area, idPropriedade, corte " +
+                            " FROM talhao" +
+                            " where idPropriedade = ?" +
+                            " order by identificacao",new String[]{idPropriedade+""});
         cursor.moveToFirst();
 
         for (int i = 0; i < cursor.getCount(); i++) {
@@ -58,6 +61,8 @@ public class DaoTalhao {
             talhao.setId(cursor.getInt(0));
             talhao.setIdentificacao(cursor.getString(1));
             talhao.setArea(cursor.getString(2));
+            talhao.setIdPropriedade(cursor.getInt(3));
+            talhao.setCorte(cursor.getInt(4));
             lista.add(talhao);
             cursor.moveToNext();
         }

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">SisCDS</string>
+    <string name="title_activity_info_brocas">InfoBrocas</string>
+    <string name="title_activity_info_broca">InfoBroca</string>
+    <string name="title_activity_consulta">Consultar</string>
 </resources>

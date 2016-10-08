@@ -35,6 +35,6 @@ public class PropriedadeRural {
 
     @Override
     public String toString() {
-        return identificacao+"/"+nome;
+        return identificacao+" / "+nome;
     }
 }

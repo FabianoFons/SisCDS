@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (edLogin.getText().toString().trim().equals("") || edSenha.getText().toString().trim().equals("")){
-                    Toast.makeText(getBaseContext(),"Usuário/Senha Inválido",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(),"Usuário / Senha Inválido",Toast.LENGTH_LONG).show();
                 }else {
                     DaoUsuario daoUsuario = new DaoUsuario(getBaseContext());
                     Usuario usuario = daoUsuario.getUsuarioByLoginSenha(edLogin.getText().toString(), edSenha.getText().toString());

@@ -11,6 +11,8 @@ public class Talhao {
     private String identificacao;
     private String area;
     private Date data;
+    private int idPropriedade;
+    private int corte;
 
 
     public Integer getId() {
@@ -48,5 +50,21 @@ public class Talhao {
     @Override
     public String toString (){
         return identificacao + " / " + area;
+    }
+
+    public void setIdPropriedade(int idPropriedade) {
+        this.idPropriedade = idPropriedade;
+    }
+
+    public int getIdPropriedade() {
+        return idPropriedade;
+    }
+
+    public void setCorte(int corte) {
+        this.corte = corte;
+    }
+
+    public int getCorte() {
+        return corte;
     }
 }
