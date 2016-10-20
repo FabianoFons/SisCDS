@@ -51,7 +51,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="44dp">
+            android:layout_height="50dp">
 
             <TextView
                 android:text="Broca Grande"
@@ -61,32 +61,32 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:layout_width="334dp"
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/edBG" />
+                android:id="@+id/edBG"
+                android:layout_width="275dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="44dp">
+            android:layout_height="50dp">
 
             <TextView
                 android:text="Broca Pequena"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/textView8"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_height="50dp" />
 
             <EditText
-                android:layout_width="282dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/edBP" />
+                android:id="@+id/edBP"
+                android:layout_width="275dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -102,11 +102,11 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:layout_width="311dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/edCrisalida" />
+                android:id="@+id/edCrisalida"
+                android:layout_width="275dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -122,11 +122,11 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/edPupa" />
+                android:id="@+id/edPupa"
+                android:layout_width="275dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -142,12 +142,11 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/edTotalNo"
-                android:layout_weight="5.85" />
+                android:layout_width="275dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -163,11 +162,11 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:layout_width="315dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/edBrocado" />
+                android:id="@+id/edBrocado"
+                android:layout_width="275dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -178,17 +177,16 @@
             <TextView
                 android:text="Podridão Vermelha"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/textView21"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_height="50dp" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="277dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/edPV"
-                android:layout_weight="1.41" />
+                android:id="@+id/edPV" />
         </LinearLayout>
 
         <Button

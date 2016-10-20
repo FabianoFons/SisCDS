@@ -34,8 +34,16 @@
             android:layout_height="59dp" />
 
         <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_weight="0.45" />
+
+        <Button
+            android:text="Voltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btVoltar" />
+
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

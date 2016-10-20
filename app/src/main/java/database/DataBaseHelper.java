@@ -51,6 +51,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 " _id INTEGER PRIMARY_KEY," +
                 " tipo VARCHAR(20));");
 
+        db.execSQL("Create table broca (" +
+                " _id INTEGER PRIMARY_KEY," +
+                " brocaGrande int," +
+                "brocaPequena int," +
+                "crisalida int," +
+                "pupas int, totalNo int, brocados int, podridaoVermelha int);");
+
         db.execSQL("insert into usuario (_id, nome, login, senha) values (1,'RONALDO','ronaldo','123');");
         db.execSQL("insert into usuario (_id, nome, login, senha) values (2,'FABIANO','fabiano','123');");
         db.execSQL("insert into usuario (_id, nome, login, senha) values (3,'KLEBER','kleber','123');");
@@ -66,6 +73,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("insert into talhao (_id, identificacao, area, idPropriedade, corte) values (1, 'IDTC:1','Area:12', 1, 3);");
         db.execSQL("insert into talhao (_id, identificacao, area, idPropriedade, corte) values (2, 'IDTC:2','Area:19', 2, 10);");
         db.execSQL("insert into talhao (_id, identificacao, area, idPropriedade, corte) values (3, 'IDTC:3','Area:5' , 3, 12);");
+
+        db.execSQL("insert into broca (_id, brocaGrande, brocaPequena, crisalida, pupas, totalNo, brocados, podridaoVermelha) values (1, '10','18', '26', '23', '50', '46', '29');");
     }
 
     @Override
